@@ -1,0 +1,24 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title> Pendientes </ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<!-- <ion-content [fullscreen]="true">
+	<ion-header collapse="condense">
+		<ion-toolbar>
+			<ion-title size="large">Tab 1</ion-title>
+		</ion-toolbar>
+	</ion-header>
+
+	<app-explore-container name="Tab 1 page"></app-explore-container>
+</ion-content> -->
+<ion-content>
+	<app-listas [listas]="listas"></app-listas>
+	<!-- <app-listas></app-listas> -->
+</ion-content>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+	<ion-fab-button>
+		<ion-icon name="add" (click)="agregarLista()"></ion-icon>
+	</ion-fab-button>
+</ion-fab>

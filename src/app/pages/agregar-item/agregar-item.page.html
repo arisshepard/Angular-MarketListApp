@@ -1,0 +1,52 @@
+<ion-header class="ion-no-border">
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button defaultHref="/"></ion-back-button>
+		</ion-buttons>
+		<ion-title>Nuevo producto</ion-title>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<!-- <ion-item lines="none">
+		<ion-title>Nuevo producto</ion-title>
+	</ion-item> -->
+	<form [formGroup]="formulario" (ngSubmit)="grabarItem()">
+		<ion-grid>
+			<ion-row class="ion-align-items-center">
+				<ion-col>
+					<ion-item>
+						<ion-icon slot="start" size="large" name="cart"></ion-icon>
+						<ion-label position="floating">Producto</ion-label>
+						<ion-input formControlName="producto"></ion-input>
+					</ion-item>
+				</ion-col>
+			</ion-row>
+			<ion-row class="ion-align-items-center">
+				<ion-col>
+					<ion-item>
+						<ion-icon slot="start" size="large" name="pricetag"></ion-icon>
+						<ion-label position="floating">Cantidad</ion-label>
+						<ion-input type="number" formControlName="cantidad"></ion-input>
+					</ion-item>
+				</ion-col>
+			</ion-row>
+			<ion-row class="ion-align-items-center">
+				<ion-col>
+					<ion-item>
+						<ion-icon slot="start" size="large" name="checkbox"></ion-icon>
+						<ion-label>Comprado</ion-label>
+						<ion-checkbox slot="end" formControlName="comprado"></ion-checkbox>
+					</ion-item>
+				</ion-col>
+			</ion-row>
+			<ion-row class="ion-align-items-center">
+				<ion-col class="ion-col-centered">
+					<ion-button type="submit" size="large" [disabled]="!formulario.valid"
+						><ion-icon slot="start" name="bag-add"></ion-icon>
+						Añadir</ion-button
+					>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</form>
+</ion-content>
